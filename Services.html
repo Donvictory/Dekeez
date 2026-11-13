@@ -1,18 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-    <style>
-        h2{
-            margin-left: 40%;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services and Rates | Dekeez Beauty Nigeria</title>
+  <meta name="description" content="Explore luxury makeup artistry services by Dekeez Beauty: Bridal couture, traditional engagement, owambe glam, and editorial sessions in Lagos and Abuja.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+          },
+          colors: {
+            surface: {
+              DEFAULT: '#131209',
+              alt: '#181818',
+              card: '#1F1F1F',
+              elevated: '#272727',
+              border: '#313131',
+            },
+            muted: '#9B9B9B',
+          }
         }
-    </style>
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h2 >My Services<h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla eum quis, et aut corrupti deserunt ut odio, totam adipisci corporis placeat iusto inventore veniam voluptatibus dignissimos! Iste consequuntur dolores exercitationem, nisi molestias fuga quos quas quod, voluptatum sit dolorum provident unde, sapiente soluta. Accusantium impedit, atque animi doloribus dolores vero officia laboriosam beatae labore cumque repellendus accusamus facere sunt! Sequi nostrum magnam non amet ipsam totam nam quidem quis est harum adipisci dolor cupiditate, beatae debitis tenetur, repellendus provident dignissimos qui et. Officiis qui, repellendus ducimus, nihil officia doloremque veritatis asperiores consequatur nulla itaque quas iure explicabo voluptate accusamus.</p>
+<body class="bg-[#131209] text-white antialiased">
+
+  <!-- Header -->
+  <header class="py-6 px-4 border-b border-[#1F1F1F]">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 text-white font-semibold text-base">
+        <span class="w-7 h-7 rounded-full bg-white text-[#131209] flex items-center justify-center font-bold text-xs">D</span>
+        <span>Dekeez Beauty</span>
+      </a>
+      <a href="index.html" class="btn-secondary text-sm">
+        Back to home
+      </a>
+    </div>
+  </header>
+
+  <main class="py-16 md:py-24 px-4 sm:px-6 max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-xs uppercase tracking-widest text-[#9B9B9B] font-semibold block mb-2">Artistry rates</span>
+      <h1 class="text-3xl sm:text-5xl font-semibold text-white mb-4">Services and packages</h1>
+      <p class="text-base text-[#9B9B9B] max-w-xl mx-auto">
+        All sessions include custom skin preparation, faux mink lash application, and touch up supplies.
+      </p>
+    </div>
+
+    <div class="space-y-8">
+      <!-- Bridal White Wedding -->
+      <div class="p-8 rounded-2xl bg-[#181818] border border-[#272727]">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+          <h2 class="text-2xl font-semibold text-white">White wedding bride glam</h2>
+          <span class="text-xs uppercase tracking-wider text-white px-3 py-1 rounded-full bg-[#272727] w-fit">Full day package</span>
+        </div>
+        <p class="text-sm text-[#9B9B9B] mb-6">
+          Includes pre wedding trial consultation, morning bridal session, ceremony touch up, and reception change assistance.
+        </p>
+        <a href="https://wa.me/2347080858595?text=Hello%20Dekeez%20Beauty,%20I%20would%20like%20to%20book%20the%20White%20Wedding%20Bride%20Glam." target="_blank" rel="noopener noreferrer" class="btn-primary">
+          Inquire package on WhatsApp
+        </a>
+      </div>
+
+      <!-- Traditional Engagement -->
+      <div class="p-8 rounded-2xl bg-[#181818] border border-[#272727]">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+          <h2 class="text-2xl font-semibold text-white">Traditional engagement glam</h2>
+          <span class="text-xs uppercase tracking-wider text-white px-3 py-1 rounded-full bg-[#272727] w-fit">Ceremony package</span>
+        </div>
+        <p class="text-sm text-[#9B9B9B] mb-6">
+          Vibrant, long lasting glam formulated to pair with traditional attire, gele tying support, and continuous skin glow.
+        </p>
+        <a href="https://wa.me/2347080858595?text=Hello%20Dekeez%20Beauty,%20I%20would%20like%20to%20book%20the%20Traditional%20Engagement%20Glam." target="_blank" rel="noopener noreferrer" class="btn-primary">
+          Inquire package on WhatsApp
+        </a>
+      </div>
+
+      <!-- Owambe Glam -->
+      <div class="p-8 rounded-2xl bg-[#181818] border border-[#272727]">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+          <h2 class="text-2xl font-semibold text-white">Guest and owambe glam</h2>
+          <span class="text-xs uppercase tracking-wider text-white px-3 py-1 rounded-full bg-[#272727] w-fit">Single session</span>
+        </div>
+        <p class="text-sm text-[#9B9B9B] mb-6">
+          Full face glam for wedding guests, birthdays, red carpet galas, and special occasions.
+        </p>
+        <a href="https://wa.me/2347080858595?text=Hello%20Dekeez%20Beauty,%20I%20would%20like%20to%20book%20Owambe%20Glam." target="_blank" rel="noopener noreferrer" class="btn-primary">
+          Inquire session on WhatsApp
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-8 px-4 border-t border-[#1F1F1F] text-center text-xs text-[#9B9B9B]">
+    Dekeez Beauty Nigeria. Available for travel across Lagos, Abuja, and international locations.
+  </footer>
 </body>
 </html>

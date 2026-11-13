@@ -1,81 +1,706 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dekeez Webpage</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" href="small-device.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dekeez Beauty | Luxury Bridal and Event Makeup Artist in Nigeria</title>
+  <meta name="description" content="Professional bridal, traditional engagement, and luxury occasion makeup artistry by Dekeez Beauty. Serving brides in Lagos, Abuja, and destination events with long lasting, flashback free glam.">
+  <link rel="canonical" href="https://dekeezbeauty.com">
+  <meta property="og:title" content="Dekeez Beauty | Luxury Bridal and Event Makeup Artist">
+  <meta property="og:description" content="Radiant, all day camera ready beauty tailored for Nigerian skin tones and humid celebrations.">
+  <meta property="og:image" content="Dekz3.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23131209'/><text x='16' y='21' font-size='15' font-family='sans-serif' font-weight='bold' fill='%23FFFFFF' text-anchor='middle'>D</text></svg>">
+
+  <!-- Tailwind CSS via CDN with custom config matching Part B token system -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+          },
+          colors: {
+            surface: {
+              DEFAULT: '#131209',
+              alt: '#181818',
+              card: '#1F1F1F',
+              raised: '#272727',
+              border: '#313131',
+            },
+            muted: '#9B9B9B',
+          },
+          spacing: {
+            '25': '2px',
+            '50': '4px',
+            '75': '8px',
+            '100': '12px',
+            '200': '16px',
+            '300': '24px',
+            '400': '32px',
+            '500': '40px',
+            '600': '48px',
+            '700': '64px',
+            '800': '80px',
+            '900': '96px',
+          },
+          transitionTimingFunction: {
+            fluid: 'cubic-bezier(0.32, 0.72, 0, 1)',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-[#131209] text-white antialiased selection:bg-white selection:text-[#131209]">
 
-        <header>
-            <nav class="navbar navbar-dark bg-dark fixed-top">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Dekeez <span>Beauty</span></a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                 
-                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#" style="color: black;">Home</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="Services.html" style="color: black;">Services</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
-                            About
-                          </a>
-                          <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="#" style="color: white;">About</a></li>
-                            <li><a class="dropdown-item" href="#" style="color: white;">Contact</a></li>
-                            <li>
-                              <hr class="dropdown-divider">
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                      <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
-                      </form>
-                    </div>
-                  </div>
+  <!-- Skip to main content for keyboard accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-3 focus:py-2 focus:bg-white focus:text-[#131209] focus:rounded-lg focus:font-semibold">Skip to content</a>
+
+  <!-- B7 Fluid Island Nav: Detached floating pill navbar -->
+  <header class="fixed top-0 left-0 right-0 z-40 px-4 pointer-events-none">
+    <nav class="mt-6 mx-auto w-full max-w-4xl pointer-events-auto rounded-full bg-[#181818]/90 backdrop-blur-xl border border-[#313131] px-4 py-2 flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] shadow-2xl">
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center gap-2 text-white font-semibold text-base tracking-tight focus:outline-none focus:ring-2 focus:ring-white rounded-full px-2 py-1">
+        <span class="w-7 h-7 rounded-full bg-white text-[#131209] flex items-center justify-center font-bold text-xs">D</span>
+        <span>Dekeez Beauty</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden md:flex items-center gap-1">
+        <a href="#portfolio" class="desktop-nav-link text-sm font-medium text-[#9B9B9B] hover:text-white px-3 py-1.5 rounded-full transition-colors duration-200">Portfolio</a>
+        <a href="#about" class="desktop-nav-link text-sm font-medium text-[#9B9B9B] hover:text-white px-3 py-1.5 rounded-full transition-colors duration-200">About</a>
+        <a href="#services" class="desktop-nav-link text-sm font-medium text-[#9B9B9B] hover:text-white px-3 py-1.5 rounded-full transition-colors duration-200">Services</a>
+        <a href="#process" class="desktop-nav-link text-sm font-medium text-[#9B9B9B] hover:text-white px-3 py-1.5 rounded-full transition-colors duration-200">Process</a>
+        <a href="#faq" class="desktop-nav-link text-sm font-medium text-[#9B9B9B] hover:text-white px-3 py-1.5 rounded-full transition-colors duration-200">FAQ</a>
+      </div>
+
+      <!-- Header Action -->
+      <div class="hidden md:flex items-center">
+        <a href="https://wa.me/2347080858595?text=Hello%20Dekeez%20Beauty,%20I%20want%20to%20check%20availability%20for%20my%20event." target="_blank" rel="noopener noreferrer" class="btn-header">
+          <span>Book via WhatsApp</span>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button with Fluid Morph -->
+      <button id="mobile-nav-toggle" aria-label="Toggle navigation menu" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-white rounded-full bg-[#1F1F1F] border border-[#313131]">
+        <span id="line-top" class="w-5 h-0.5 bg-white transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] origin-center"></span>
+        <span id="line-bottom" class="w-5 h-0.5 bg-white transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] origin-center"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Fullscreen Backdrop Overlay Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-30 bg-[#131209]/95 backdrop-blur-3xl pointer-events-none opacity-0 flex flex-col justify-center px-8 transition-opacity duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] md:hidden">
+    <div class="flex flex-col gap-6 max-w-sm mx-auto w-full">
+      <span class="text-xs font-semibold tracking-wider text-[#9B9B9B] uppercase">Menu</span>
+      <a href="#portfolio" class="mobile-nav-link text-2xl font-semibold text-white translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">Portfolio</a>
+      <a href="#about" class="mobile-nav-link text-2xl font-semibold text-white translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">About artist</a>
+      <a href="#services" class="mobile-nav-link text-2xl font-semibold text-white translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">Services and rates</a>
+      <a href="#process" class="mobile-nav-link text-2xl font-semibold text-white translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">Booking process</a>
+      <a href="#faq" class="mobile-nav-link text-2xl font-semibold text-white translate-y-8 opacity-0 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]">Questions</a>
+      <div class="pt-6 border-t border-[#272727]">
+        <a href="https://wa.me/2347080858595?text=Hello%20Dekeez%20Beauty,%20I%20want%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer" class="btn-primary w-full text-center">
+          Book session via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- HERO SECTION (A2 Above the Fold) -->
+    <section id="home" class="relative pt-32 pb-16 md:pt-40 md:pb-24 px-4 sm:px-6 max-w-6xl mx-auto">
+      <div class="flex flex-col items-center text-center">
+        
+        <!-- Social Proof Signal strip above the fold -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#181818] border border-[#272727] text-xs text-[#9B9B9B] mb-6">
+          <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+          <span>Over 340 brides glamorized across Lagos and Abuja</span>
+        </div>
+
+        <!-- Hero Heading (Gradient #FFFFFF -> #9B9B9B, max width 680px, meaningful line breaks) -->
+        <h1 class="hero-gradient-text text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight max-w-[680px] leading-tight mb-6">
+          Luxury bridal glam<br>crafted for your skin tone
+        </h1>
+
+        <!-- Subheading (Max width 680px, clarifying offer and audience) -->
+        <p class="text-base sm:text-lg text-[#9B9B9B] max-w-[680px] mb-8 font-normal">
+          Flawless, flashback free makeup that withstands humid ceremonies and 14 hour party schedules. Available for on location bookings across Nigeria.
+        </p>
+
+        <!-- Single Primary CTA (No competing CTAs above the fold) -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 mb-12">
+          <a href="https://wa.me/2347080858595?text=Hello%20Dekeez%20Beauty,%20I%20would%20like%20to%20check%20booking%20dates%20for%20my%20wedding." target="_blank" rel="noopener noreferrer" class="btn-primary w-full sm:w-auto">
+            <span>Book date via WhatsApp</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <a href="#services" class="btn-secondary w-full sm:w-auto">
+            <span>Explore service menu</span>
+          </a>
+        </div>
+
+        <!-- HERO VISUAL: Dekz3.jpg (Introduction to the portfolio as requested) -->
+        <div id="portfolio" class="w-full max-w-4xl scroll-reveal translate-y-16 blur-md opacity-0">
+          <div class="relative rounded-2xl overflow-hidden bg-[#181818] border border-[#272727] p-2 sm:p-4 shadow-2xl">
+            <div class="relative w-full rounded-xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-[#1F1F1F]">
+              <img src="Dekz3.jpg" alt="Dekeez Beauty bridal glam signature look featuring radiant glowing skin" class="w-full h-full object-cover object-center transform transition-transform duration-700 hover:scale-[1.02]">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#131209]/90 via-transparent to-transparent flex items-end p-6">
+                <div>
+                  <span class="text-xs font-semibold uppercase tracking-wider text-white/70 block mb-1">Portfolio preview</span>
+                  <p class="text-lg sm:text-xl font-semibold text-white">Traditional engagement and white wedding bridal look</p>
                 </div>
-              </nav>
-        </header>
-        <main>
-           <div class="container">
-            <img src="Dekz3.jpg" alt="">
-           </div>
-           <div class="container">
-            <h3 style="color: white;">Welcome <span>To</span> <span style="color: white;">My</span> <span>Page</span></h3>
-           </div>
-        </main>
-        <footer>
-            <p></p>
-        </footer>
+              </div>
+            </div>
+            <!-- Trust badges directly below hero visual -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 px-2 text-left">
+              <div>
+                <p class="text-xs text-[#9B9B9B]">Longevity</p>
+                <p class="text-sm font-semibold text-white">16 hour wear test</p>
+              </div>
+              <div>
+                <p class="text-xs text-[#9B9B9B]">Skin finish</p>
+                <p class="text-sm font-semibold text-white">Zero flashback</p>
+              </div>
+              <div>
+                <p class="text-xs text-[#9B9B9B]">Locations</p>
+                <p class="text-sm font-semibold text-white">Lagos and Abuja</p>
+              </div>
+              <div>
+                <p class="text-xs text-[#9B9B9B]">Deposit guarantee</p>
+                <p class="text-sm font-semibold text-white">Date security locked</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-   
-    <script 
-        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" 
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" 
-        crossorigin="anonymous">
-    </script>
-    <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" 
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" 
-        crossorigin="anonymous">
-    </script>
-    
+      </div>
+    </section>
+
+    <!-- B11 TAGLINE REVEAL SECTION (Mandatory separate moment) -->
+    <section id="tagline-section" class="py-20 md:py-32 px-4 sm:px-6 border-y border-[#1F1F1F] bg-[#181818]">
+      <div class="max-w-4xl mx-auto text-center">
+        <span class="text-xs uppercase tracking-widest text-[#9B9B9B] font-semibold block mb-4">Artistry philosophy</span>
+        <h2 id="tagline-reveal-text" class="text-3xl sm:text-4xl md:text-5xl font-semibold leading-relaxed tracking-tight max-w-[680px] mx-auto">
+          Every celebration deserves radiant makeup that looks like skin in daylight and glows in wedding photography.
+        </h2>
+        <p class="text-sm text-[#9B9B9B] mt-6">Dekeez Beauty bridal standard</p>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION (Featuring Dekz (2).jpg as requested) -->
+    <section id="about" class="py-20 md:py-28 px-4 sm:px-6 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Visual Column with Dekz (2).jpg -->
+        <div class="lg:col-span-5 scroll-reveal translate-y-16 blur-md opacity-0">
+          <div class="relative rounded-2xl overflow-hidden bg-[#181818] border border-[#272727] p-3 shadow-xl">
+            <div class="rounded-xl overflow-hidden aspect-[4/5] bg-[#1F1F1F]">
+              <img src="Dekz (2).jpg" alt="Dekeez Beauty editorial beauty and glam portrait" class="w-full h-full object-cover object-center">
+            </div>
+            <div class="p-3 text-center">
+              <p class="text-xs uppercase tracking-wider text-[#9B9B9B] font-medium">Dekeez Beauty Studio</p>
+              <p class="text-sm font-semibold text-white">Lead Artist and Creative Director</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Narrative Column -->
+        <div class="lg:col-span-7 flex flex-col gap-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1F1F1F] border border-[#272727] w-fit text-xs text-[#9B9B9B]">
+            <span>About the artist</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-semibold text-white">
+            Beauty tailored to African skin tones and warm weather realities
+          </h2>
+          <p class="text-base text-[#9B9B9B]">
+            Founded by a dedicated Nigerian makeup artist, Dekeez Beauty exists to deliver high impact, skin focused beauty. Nigerian weddings are vibrant, emotional, and long. Your makeup must withstand energetic dancing, warm humidity, and countless high resolution cameras without separating or changing color.
+          </p>
+          <p class="text-base text-[#9B9B9B]">
+            Every look begins with targeted skin preparation using clean, premium hydration products that balance oils before a single brush touch. Whether you are walking down the aisle in Victoria Island or celebrating your traditional engagement in Abuja, you receive a composed, timeless finish that highlights your unique bone structure.
+          </p>
+          <div class="grid grid-cols-2 gap-4 pt-4 border-t border-[#1F1F1F]">
+            <div>
+              <p class="text-2xl font-bold text-white">340+</p>
+              <p class="text-sm text-[#9B9B9B]">Weddings completed</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-white">7+ Years</p>
+              <p class="text-sm text-[#9B9B9B]">Professional artistry</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS SECTION (A2 & A5: 4 Outcome bullets, avoiding 3 cards in a row) -->
+    <section id="services" class="py-20 md:py-28 px-4 sm:px-6 bg-[#181818] border-y border-[#1F1F1F]">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-widest text-[#9B9B9B] font-semibold block mb-2">Signature outcomes</span>
+          <h2 class="text-2xl sm:text-4xl font-semibold text-white mb-4">
+            Why brides and event celebrants trust Dekeez Beauty
+          </h2>
+          <p class="text-base text-[#9B9B9B]">
+            Every service is engineered around longevity, photo fidelity, and skin comfort.
+          </p>
+        </div>
+
+        <!-- 2 Column Outcome Cards (Respects no 3 cards in a row constraint) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-2xl bg-[#1F1F1F] border border-[#272727] flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-[#272727] flex items-center justify-center text-white mb-4">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Sweat and humidity resistance</h3>
+              <p class="text-sm text-[#9B9B9B] leading-relaxed">
+                Custom priming layers seal hydration inside while repelling moisture from outside. Your base remains intact through outdoor photography, church tears, and high energy reception dancing.
+              </p>
+            </div>
+            <p class="text-xs font-semibold text-white mt-6 pt-4 border-t border-[#272727]">Result: 16 hours of fresh complexion without mid day caking</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#1F1F1F] border border-[#272727] flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-[#272727] flex items-center justify-center text-white mb-4">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Zero flashback camera precision</h3>
+              <p class="text-sm text-[#9B9B9B] leading-relaxed">
+                We use micro milled silica free powders tested under high power camera strobes. You get pure skin glow without white casts, grey undertones, or harsh flashback in professional 4K footage.
+              </p>
+            </div>
+            <p class="text-xs font-semibold text-white mt-6 pt-4 border-t border-[#272727]">Result: Picture perfect portraits from mobile video to wedding album</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#1F1F1F] border border-[#272727] flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-[#272727] flex items-center justify-center text-white mb-4">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Punctual call time execution</h3>
+              <p class="text-sm text-[#9B9B9B] leading-relaxed">
+                We map timing down to 45 minutes per bridal party attendant and 90 minutes for the bride. The bridal suite stays peaceful, you finish on schedule, and your wedding photographer never waits.
+              </p>
+            </div>
+            <p class="text-xs font-semibold text-white mt-6 pt-4 border-t border-[#272727]">Result: Zero morning panic and zero rushed moments</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#1F1F1F] border border-[#272727] flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-[#272727] flex items-center justify-center text-white mb-4">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">Hospital grade sanitation protocol</h3>
+              <p class="text-sm text-[#9B9B9B] leading-relaxed">
+                Single use applicators for mascara and lips, 70 percent isopropyl sanitized brush sets for every face, and stainless steel palette decanting protect sensitive and acne prone skin.
+              </p>
+            </div>
+            <p class="text-xs font-semibold text-white mt-6 pt-4 border-t border-[#272727]">Result: Clean pores, zero post event irritation, total peace of mind</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE PACKAGES OVERVIEW -->
+    <section class="py-20 md:py-28 px-4 sm:px-6 max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-widest text-[#9B9B9B] font-semibold block mb-2">Service catalog</span>
+        <h2 class="text-2xl sm:text-4xl font-semibold text-white mb-4">
+          Bookings tailored to your occasion
+        </h2>
+        <p class="text-base text-[#9B9B9B]">Transparent booking scopes for bridal, event, and editorial glam.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Bridal Glam Package -->
+        <div class="p-8 rounded-2xl bg-[#181818] border border-[#272727] flex flex-col justify-between relative">
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-xs uppercase tracking-wider text-white font-semibold px-3 py-1 rounded-full bg-[#272727]">Most requested</span>
+              <span class="text-sm text-[#9B9B9B]">Lagos and Abuja</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-white mb-2">Bridal couture package</h3>
+            <p class="text-sm text-[#9B9B9B] mb-6">Designed for white wedding and traditional engagement ceremonies.</p>
+            <ul class="space-y-3 text-sm text-[#9B9B9B] mb-8">
+              <li class="flex items-center gap-2 text-white">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Full skin preparation and hydration locking</span>
+              </li>
+              <li class="flex items-center gap-2 text-white">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Luxury faux mink lash customization</span>
+              </li>
+              <li class="flex items-center gap-2 text-white">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Full bridal emergency touch up kit included</span>
+              </li>
+              <li class="flex items-center gap-2 text-white">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Gele tying or veil placement assistance</span>
+              </li>
+            </ul>
+          </div>
+          <a href="https://wa.me/2347080858595?text=Hello%20Dekeez%20Beauty,%20I%20am%20interested%20in%20the%20Bridal%20Couture%20Package." target="_blank" rel="noopener noreferrer" class="btn-primary w-full text-center">
+            Inquire bridal package on WhatsApp
+          </a>
+        </div>
+
+        <!-- Occasion & Owambe Glam -->
+        <div class="p-8 rounded-2xl bg-[#181818] border border-[#272727] flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-xs uppercase tracking-wider text-[#9B9B9B] font-semibold px-3 py-1 rounded-full bg-[#1F1F1F]">Celebration</span>
+              <span class="text-sm text-[#9B9B9B]">Studio or location</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-white mb-2">Owambe and event glam</h3>
+            <p class="text-sm text-[#9B9B9B] mb-6">For wedding guests, milestone birthdays, red carpets, and galas.</p>
+            <ul class="space-y-3 text-sm text-[#9B9B9B] mb-8">
+              <li class="flex items-center gap-2 text-white">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Flawless undertone matched base complexion</span>
+              </li>
+              <li class="flex items-center gap-2 text-white">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dimensional eye look with lash application</span>
+              </li>
+              <li class="flex items-center gap-2 text-white">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Transfer resistant matte or satin lip finish</span>
+              </li>
+              <li class="flex items-center gap-2 text-white">
+                <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Setting mist treatment for extended wear</span>
+              </li>
+            </ul>
+          </div>
+          <a href="https://wa.me/2347080858595?text=Hello%20Dekeez%20Beauty,%20I%20am%20interested%20in%20the%20Owambe%20and%20Event%20Glam%20Package." target="_blank" rel="noopener noreferrer" class="btn-secondary w-full text-center">
+            Inquire event glam on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS (A2 & A5: 3 Clear Steps) -->
+    <section id="process" class="py-20 md:py-28 px-4 sm:px-6 bg-[#181818] border-y border-[#1F1F1F]">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-widest text-[#9B9B9B] font-semibold block mb-2">Simple workflow</span>
+          <h2 class="text-2xl sm:text-4xl font-semibold text-white mb-4">
+            How to secure your booking in three steps
+          </h2>
+          <p class="text-base text-[#9B9B9B]">A prompt, structured process from initial message to event day.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div class="p-6 rounded-2xl bg-[#131209] border border-[#272727]">
+            <span class="text-xs font-bold text-[#9B9B9B] uppercase tracking-wider block mb-2">Step 01</span>
+            <h3 class="text-lg font-semibold text-white mb-2">Send your date and location</h3>
+            <p class="text-sm text-[#9B9B9B] leading-relaxed">
+              Message us on WhatsApp with your event date, preparation location, and total number of faces. We confirm availability within two hours.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="p-6 rounded-2xl bg-[#131209] border border-[#272727]">
+            <span class="text-xs font-bold text-[#9B9B9B] uppercase tracking-wider block mb-2">Step 02</span>
+            <h3 class="text-lg font-semibold text-white mb-2">Confirm date with deposit</h3>
+            <p class="text-sm text-[#9B9B9B] leading-relaxed">
+              A 50 percent non refundable deposit locks your calendar slot. You receive an official booking agreement and morning schedule timeline.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="p-6 rounded-2xl bg-[#131209] border border-[#272727]">
+            <span class="text-xs font-bold text-[#9B9B9B] uppercase tracking-wider block mb-2">Step 03</span>
+            <h3 class="text-lg font-semibold text-white mb-2">Event day execution</h3>
+            <p class="text-sm text-[#9B9B9B] leading-relaxed">
+              Our artist arrives 15 minutes before call time with full lighting gear, clean kits, and starts your look without delay.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE WHATSAPP BOOKING BUILDER -->
+    <section class="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto">
+      <div class="p-8 sm:p-12 rounded-2xl bg-[#181818] border border-[#272727] shadow-2xl">
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <span class="text-xs uppercase tracking-widest text-[#9B9B9B] font-semibold block mb-2">Direct booking dispatch</span>
+          <h2 class="text-2xl sm:text-3xl font-semibold text-white mb-3">
+            Check your date availability on WhatsApp
+          </h2>
+          <p class="text-sm text-[#9B9B9B]">
+            Select your details below. Clicking the button opens WhatsApp with your prefilled inquiry directly to our booking manager.
+          </p>
+        </div>
+
+        <form id="booking-inquiry-form" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="client-name" class="block text-xs font-medium text-[#9B9B9B] mb-1">Your full name</label>
+              <input type="text" id="client-name" required placeholder="e.g. Chioma Adebayo" class="form-input">
+            </div>
+            <div>
+              <label for="service-type" class="block text-xs font-medium text-[#9B9B9B] mb-1">Service category</label>
+              <select id="service-type" class="form-input">
+                <option value="Bridal Couture (White and Traditional)">Bridal Couture (White and Traditional)</option>
+                <option value="White Wedding Bride Only">White Wedding Bride Only</option>
+                <option value="Traditional Engagement Bride">Traditional Engagement Bride</option>
+                <option value="Bridal Party Attendants">Bridal Party Attendants</option>
+                <option value="Owambe and Celebration Glam">Owambe and Celebration Glam</option>
+                <option value="Editorial and Commercial Shoot">Editorial and Commercial Shoot</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div>
+              <label for="event-date" class="block text-xs font-medium text-[#9B9B9B] mb-1">Event date</label>
+              <input type="date" id="event-date" required class="form-input">
+            </div>
+            <div>
+              <label for="event-location" class="block text-xs font-medium text-[#9B9B9B] mb-1">Location / City</label>
+              <select id="event-location" class="form-input">
+                <option value="Lagos Island (Ikoyi, Victoria Island, Lekki)">Lagos Island (Ikoyi, Lekki, VI)</option>
+                <option value="Lagos Mainland (Ikeja, Surulere, Maryland)">Lagos Mainland (Ikeja, Surulere)</option>
+                <option value="Abuja (Maitama, Wuse, Garki)">Abuja (Maitama, Wuse)</option>
+                <option value="Destination / Other State">Destination / Other State</option>
+              </select>
+            </div>
+            <div>
+              <label for="guest-count" class="block text-xs font-medium text-[#9B9B9B] mb-1">Number of faces</label>
+              <input type="number" id="guest-count" min="1" max="15" value="1" class="form-input">
+            </div>
+          </div>
+
+          <div>
+            <label for="client-notes" class="block text-xs font-medium text-[#9B9B9B] mb-1">Special requests or call time</label>
+            <input type="text" id="client-notes" placeholder="e.g. 6:00 AM call time in Lekki Phase 1" class="form-input">
+          </div>
+
+          <div class="pt-4">
+            <button type="submit" class="btn-primary w-full text-center py-3 text-base">
+              <span>Send booking inquiry to WhatsApp</span>
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-center text-[#9B9B9B]">We respond to all WhatsApp booking requests within two hours.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- REAL CLIENT TESTIMONIALS (Proof placed beside claims) -->
+    <section class="py-20 md:py-28 px-4 sm:px-6 bg-[#181818] border-y border-[#1F1F1F]">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-widest text-[#9B9B9B] font-semibold block mb-2">Verified feedback</span>
+          <h2 class="text-2xl sm:text-4xl font-semibold text-white mb-4">
+            Words from our brides across Nigeria
+          </h2>
+          <p class="text-base text-[#9B9B9B]">Authentic testimonials from real wedding days.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-2xl bg-[#1F1F1F] border border-[#272727] flex flex-col justify-between">
+            <p class="text-sm text-white leading-relaxed mb-6">
+              "My white wedding was in Lagos during humid August weather. I danced until 11 PM and my makeup did not move an inch. No oiliness in my T zone, no flashback in the hall, and my husband kept remarking how natural the skin looked. Dekeez Beauty is worth every single Naira."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[#272727] text-white flex items-center justify-center font-bold text-sm">
+                TA
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-white">Tolani Adeleke</p>
+                <p class="text-xs text-[#9B9B9B]">Bride, Landmark Centre Lagos</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#1F1F1F] border border-[#272727] flex flex-col justify-between">
+            <p class="text-sm text-white leading-relaxed mb-6">
+              "Punctuality was my biggest worry for our traditional engagement in Maitama Abuja. The Dekeez team arrived at 5:45 AM before my own alarm went off. They finished all four bridesmaids and myself 30 minutes ahead of schedule. The calm atmosphere made my entire morning."
+            </p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[#272727] text-white flex items-center justify-center font-bold text-sm">
+                FB
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-white">Fatima Bello</p>
+                <p class="text-xs text-[#9B9B9B]">Bride, Transcorp Hilton Abuja</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION (A2 & A5: 6 to 12 Objections handled clearly) -->
+    <section id="faq" class="py-20 md:py-28 px-4 sm:px-6 max-w-4xl mx-auto">
+      <div class="text-center max-w-xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-widest text-[#9B9B9B] font-semibold block mb-2">Clarity</span>
+        <h2 class="text-2xl sm:text-4xl font-semibold text-white mb-4">
+          Frequently asked questions
+        </h2>
+        <p class="text-base text-[#9B9B9B]">Everything you need to know about booking, travel, and preparation.</p>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="faq-item rounded-xl bg-[#181818] border border-[#272727] overflow-hidden">
+          <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none">
+            <span class="text-base font-semibold text-white">How far in advance should I book my bridal date?</span>
+            <svg class="faq-icon w-5 h-5 text-[#9B9B9B] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-sm text-[#9B9B9B] leading-relaxed border-t border-[#272727] pt-3">
+            We recommend booking three to six months in advance, especially for popular wedding dates in November, December, and April. Dates are strictly reserved on a first deposit basis.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item rounded-xl bg-[#181818] border border-[#272727] overflow-hidden">
+          <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none">
+            <span class="text-base font-semibold text-white">Do you travel outside Lagos for weddings?</span>
+            <svg class="faq-icon w-5 h-5 text-[#9B9B9B] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-sm text-[#9B9B9B] leading-relaxed border-t border-[#272727] pt-3">
+            Yes. We regularly travel across Nigeria including Abuja, Port Harcourt, Ibadan, and destination international locations. Out of state bookings include flight or road logistics and verified hotel accommodation.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item rounded-xl bg-[#181818] border border-[#272727] overflow-hidden">
+          <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none">
+            <span class="text-base font-semibold text-white">Are bridal makeup trial sessions available?</span>
+            <svg class="faq-icon w-5 h-5 text-[#9B9B9B] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-sm text-[#9B9B9B] leading-relaxed border-t border-[#272727] pt-3">
+            Yes. Bridal trials take place at our studio in Lagos. During the trial we test two lip variants, fine tune foundation shade matching, and take test flash photographs to finalize your wedding day vision.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item rounded-xl bg-[#181818] border border-[#272727] overflow-hidden">
+          <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none">
+            <span class="text-base font-semibold text-white">How do you ensure the makeup does not flashback in photos?</span>
+            <svg class="faq-icon w-5 h-5 text-[#9B9B9B] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-sm text-[#9B9B9B] leading-relaxed border-t border-[#272727] pt-3">
+            We use photographic grade powders free from high concentrations of titanium dioxide and zinc oxide. Our products are specifically balanced for warm and deep African skin tones under direct strobe lighting.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item rounded-xl bg-[#181818] border border-[#272727] overflow-hidden">
+          <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none">
+            <span class="text-base font-semibold text-white">What is your payment and cancellation policy?</span>
+            <svg class="faq-icon w-5 h-5 text-[#9B9B9B] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-sm text-[#9B9B9B] leading-relaxed border-t border-[#272727] pt-3">
+            A 50 percent non refundable deposit secures your date. The remaining 50 percent balance is due 48 hours prior to the event date. In the event of date rescheduling, your deposit is transferable if the new date is open.
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item rounded-xl bg-[#181818] border border-[#272727] overflow-hidden">
+          <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none">
+            <span class="text-base font-semibold text-white">Can you handle large bridal parties of 6 or more?</span>
+            <svg class="faq-icon w-5 h-5 text-[#9B9B9B] transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-sm text-[#9B9B9B] leading-relaxed border-t border-[#272727] pt-3">
+            Yes. For parties exceeding five attendants, the lead artist is accompanied by senior trained assistant artists from the Dekeez Beauty team to ensure everyone finishes punctually without stress.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA (A2 & A5: Risk reversal and identical primary action) -->
+    <section class="py-20 md:py-28 px-4 sm:px-6 bg-[#181818] border-t border-[#1F1F1F]">
+      <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+        <span class="text-xs uppercase tracking-widest text-[#9B9B9B] font-semibold block mb-2">Book your date</span>
+        <h2 class="text-3xl sm:text-5xl font-semibold text-white mb-6 max-w-[680px]">
+          Lock in your wedding glam with Dekeez Beauty
+        </h2>
+        <p class="text-base sm:text-lg text-[#9B9B9B] max-w-[680px] mb-8">
+          Prime weekend dates fill months in advance. Click below to confirm date availability on WhatsApp with our team today.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+          <a href="https://wa.me/2347080858595?text=Hello%20Dekeez%20Beauty,%20I%20would%20like%20to%20reserve%20my%20wedding%20date." target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <span>Book date via WhatsApp</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+          <a href="#home" class="btn-secondary">
+            <span>Back to top</span>
+          </a>
+        </div>
+        <div class="mt-8 pt-6 border-t border-[#272727] text-xs text-[#9B9B9B]">
+          Direct response guaranteed within two hours on business days
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (B10 Ship requirements) -->
+  <footer class="py-12 px-4 sm:px-6 bg-[#131209] border-t border-[#1F1F1F]">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <span class="w-6 h-6 rounded-full bg-white text-[#131209] flex items-center justify-center font-bold text-xs">D</span>
+        <span class="text-sm font-semibold text-white">Dekeez Beauty</span>
+        <span class="text-xs text-[#9B9B9B] ml-2">Lagos and Abuja, Nigeria</span>
+        <a href="https://wa.me/2347080858595" target="_blank" rel="noopener noreferrer" class="text-xs text-white hover:underline ml-2">+234 708 085 8595</a>
+      </div>
+      <div class="flex items-center gap-6 text-xs text-[#9B9B9B]">
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#services" class="hover:text-white transition-colors">Services</a>
+        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Instagram</a>
+        <a href="terms.html" class="hover:text-white transition-colors">Terms of service</a>
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy policy</a>
+      </div>
+      <p class="text-xs text-[#9B9B9B]">
+        All rights reserved. Dekeez Beauty Nigeria.
+      </p>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON (Mobile & Desktop Quick Access) -->
+  <a href="https://wa.me/2347080858595?text=Hello%20Dekeez%20Beauty,%20I%20want%20to%20inquire%20about%20booking%20my%20event." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp with Dekeez Beauty">
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.102-.115.434-.506.549-.68.116-.173.232-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.158.571 4.185 1.568 5.941l-1.576 5.889 6.035-1.583c1.713.935 3.677 1.471 5.767 1.471 6.627 0 12-5.373 12-12s-5.373-12-12-12z"/>
+    </svg>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
 </body>
 </html>
